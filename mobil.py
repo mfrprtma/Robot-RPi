@@ -20,32 +20,32 @@ def index():
 def maju():
 	GPIO.output(motorkiri1, GPIO.HIGH)
 	GPIO.output(motorkiri2, GPIO.LOW)
-	GPIO.output(motorkanan1, GPIO.HIGH)
-	GPIO.output(motorkanan2, GPIO.LOW)
+	GPIO.output(motorkanan1, GPIO.LOW)
+	GPIO.output(motorkanan2, GPIO.HIGH)
 	return render_template('mobil.html')
 
 @app.route('/kiri')
 def kiri():
 	GPIO.output(motorkiri1, GPIO.LOW)
 	GPIO.output(motorkiri2, GPIO.HIGH)
-	GPIO.output(motorkanan1, GPIO.HIGH)
-	GPIO.output(motorkanan2, GPIO.LOW)
+	GPIO.output(motorkanan1, GPIO.LOW)
+	GPIO.output(motorkanan2, GPIO.HIGH)
 	return render_template('mobil.html')
 
 @app.route('/kanan')
 def kanan():
 	GPIO.output(motorkiri1, GPIO.HIGH)
 	GPIO.output(motorkiri2, GPIO.LOW)
-	GPIO.output(motorkanan1, GPIO.LOW)
-	GPIO.output(motorkanan2, GPIO.HIGH)
+	GPIO.output(motorkanan1, GPIO.HIGH)
+	GPIO.output(motorkanan2, GPIO.LOW)
 	return render_template('mobil.html')
 
 @app.route('/mundur')
 def mundur():
 	GPIO.output(motorkiri1, GPIO.LOW)
 	GPIO.output(motorkiri2, GPIO.HIGH)
-	GPIO.output(motorkanan1, GPIO.LOW)
-	GPIO.output(motorkanan2, GPIO.HIGH)
+	GPIO.output(motorkanan1, GPIO.HIGH)
+	GPIO.output(motorkanan2, GPIO.LOW)
 	return render_template('mobil.html')
 
 @app.route('/berhenti')
