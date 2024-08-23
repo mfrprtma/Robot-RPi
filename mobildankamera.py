@@ -25,49 +25,49 @@ GPIO.setup(motorkanan2, GPIO.OUT)
 
 @app.route('/')
 def index():
-    return render_template('mobildankamera.html', ip=ip)
+        return render_template('mobildankamera.html', ip=ip)
 
 @app.route('/maju')
 def maju():
-    GPIO.output(motorkiri1, GPIO.LOW)
-    GPIO.output(motorkiri2, GPIO.HIGH)
-    GPIO.output(motorkanan1, GPIO.HIGH)
-    GPIO.output(motorkanan2, GPIO.LOW)
-    return jsonify(status="ok")
+	GPIO.output(motorkiri1, GPIO.HIGH)
+	GPIO.output(motorkiri2, GPIO.LOW)
+	GPIO.output(motorkanan1, GPIO.LOW)
+	GPIO.output(motorkanan2, GPIO.HIGH)
+	return render_template('mobil.html')
 
 @app.route('/kiri')
 def kiri():
-    GPIO.output(motorkiri1, GPIO.HIGH)
-    GPIO.output(motorkiri2, GPIO.LOW)
-    GPIO.output(motorkanan1, GPIO.HIGH)
-    GPIO.output(motorkanan2, GPIO.LOW)
-    return jsonify(status="ok")
+	GPIO.output(motorkiri1, GPIO.LOW)
+	GPIO.output(motorkiri2, GPIO.HIGH)
+	GPIO.output(motorkanan1, GPIO.LOW)
+	GPIO.output(motorkanan2, GPIO.HIGH)
+	return render_template('mobil.html')
 
 @app.route('/kanan')
 def kanan():
-    GPIO.output(motorkiri1, GPIO.LOW)
-    GPIO.output(motorkiri2, GPIO.HIGH)
-    GPIO.output(motorkanan1, GPIO.LOW)
-    GPIO.output(motorkanan2, GPIO.HIGH)
-    return jsonify(status="ok")
+	GPIO.output(motorkiri1, GPIO.HIGH)
+	GPIO.output(motorkiri2, GPIO.LOW)
+	GPIO.output(motorkanan1, GPIO.HIGH)
+	GPIO.output(motorkanan2, GPIO.LOW)
+	return render_template('mobil.html')
 
 @app.route('/mundur')
 def mundur():
-    GPIO.output(motorkiri1, GPIO.HIGH)
-    GPIO.output(motorkiri2, GPIO.LOW)
-    GPIO.output(motorkanan1, GPIO.LOW)
-    GPIO.output(motorkanan2, GPIO.HIGH)
-    return jsonify(status="ok")
+	GPIO.output(motorkiri1, GPIO.LOW)
+	GPIO.output(motorkiri2, GPIO.HIGH)
+	GPIO.output(motorkanan1, GPIO.HIGH)
+	GPIO.output(motorkanan2, GPIO.LOW)
+	return render_template('mobil.html')
 
 @app.route('/berhenti')
 def berhenti():
-    GPIO.output(motorkiri1, GPIO.LOW)
-    GPIO.output(motorkiri2, GPIO.LOW)
-    GPIO.output(motorkanan1, GPIO.LOW)
-    GPIO.output(motorkanan2, GPIO.LOW)
-    return jsonify(status="ok")
+	GPIO.output(motorkiri1, GPIO.LOW)
+	GPIO.output(motorkiri2, GPIO.LOW)
+	GPIO.output(motorkanan1, GPIO.LOW)
+	GPIO.output(motorkanan2, GPIO.LOW)
+	return render_template('mobil.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+        app.run(debug=True, host='0.0.0.0', port=5000)
 
 
