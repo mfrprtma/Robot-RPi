@@ -1,13 +1,45 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kendali Mobil dengan Raspberry Pi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <body>
-	<h1>Kendali Mobil dengan Raspberry Pi</h1>
-	<a href='/maju'><button>MAJU</button></a>
-	<br>
-	<a href='/kiri'><button>KIRI</button></a>
-	<a href='/berhenti'><button>BERHENTI</button></a>
-	<a href='/kanan'><button>KANAN</button></a>
-	<br>
-	<a href='/mundur'><button>MUNDUR</button></a>
+    <h1>Kendali Mobil dengan Raspberry Pi</h1>
+    <div>
+        <a href="/maju" class="button">MAJU</a>
+        <a href="/kiri" class="button">KIRI</a>
+        <a href="/berhenti" class="button">BERHENTI</a>
+        <a href="/kanan" class="button">KANAN</a>
+        <a href="/mundur" class="button">MUNDUR</a>
+    </div>
 </body>
 </html>
